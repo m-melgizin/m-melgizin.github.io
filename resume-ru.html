@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Марат Мельгизин</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        [data-theme="light"] {
+            color-scheme: light;
+        }
+        [data-theme="dark"] {
+            color-scheme: dark;
+        }
+        .theme-dependent {
+            transition-property: background-color, color, border-color;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in-out;
+        }
+        [data-theme="dark"] .theme-dependent,
+        [data-theme="dark"] .theme-dependent a {
+            @apply bg-gray-900 text-gray-100;
+        }
+        [data-theme="light"] .theme-dependent,
+        [data-theme="light"] .theme-dependent a {
+            @apply bg-gray-100 text-gray-900;
+        }
+        @media print {
+            .theme-dependent,
+            .theme-dependent *,
+            .theme-dependent a {
+                @apply bg-white text-black !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="theme-dependent min-h-screen">
+    <header class="py-6">
+        <div class="max-w-3xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Резюме - Марат Мельгизин</h1>
+            <button id="theme-toggle" class="no-print focus:outline-none">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Личная информация</h2>
+            <p>Email: <a href="mailto:m.melgizin@yandex.ru" target="_blank">m.melgizin@yandex.ru</a></p>
+            <p>GitHub: <a href="https://github.com/m-melgizin" target="_blank">https://github.com/m-melgizin</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/m-melgizin/" target="_blank">https://www.linkedin.com/in/m-melgizin/</a></p>
+            <p>Telegram: <a href="https://t.me/v_oxel" target="_blank">@v_oxel</a></p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Опыт работы</h2>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, <a href="https://tbank.ru/">Т-Банк</a></strong> (мар. 2024 – н.в.)</p>
+                <p class="ml-4">Проект – микросервис мониторинга деградации производительности модулей и методов</br>
+                    Стек – Kotlin, Java 17, PostgreSQL, Spring Boot, JUnit 5, Mockito, Testcontainers, GitLab CI/CD, Docker</br>
+                    - Разработка микросервиса на Kotlin, Spring Boot и PostgreSQL</br>
+                    - Настройка пайплайнов GitLab CI/CD</br>
+                    - Внедрение требований к качеству кода</br>
+                    - Покрытие логики unit- и интеграционными тестами (JUnit, Mockito, Testcontainers)</br>
+                    - Участие в планировании задач, проведение код-ревью</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, Консалтинг-Аудит-Эксперт</strong> (сен. 2024 – мар. 2024)</p>
+                <p class="ml-4">Проект – внутренний сервис генерации отчётов</br>
+                    Стек – Kotlin, Java 17, Spring Boot, PostgreSQL, Hibernate ORM, JUnit 5, Mockito, Testcontainers, Docker</br>
+                    - Разработка REST API сервиса генерации отчётов на Kotlin, Spring Boot и PostgreSQL</br>
+                    - Написание автотестов, повышение покрытия и стабильности кода</br>
+                    - Настройка окружения с использованием Docker</br>
+                    - Планирование задач, проведение код-ревью, менторство</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, <a href="https://www.axxonsoft.com/ru/">AxxonSoft</a></strong> (окт. 2021 – сен. 2024)</p>
+                <p class="ml-4">Проект – серверная часть VMS</br>
+                    Стек – Java 8, PostgreSQL, JUnit5, Mockito, gRPC, Docker</br>
+                    - Написание серверной бизнес-логики VMS на Java и PostgreSQL</br>
+                    - Настройка индексов для PostgreSQL, оптимизация запросов к БД</br>
+                    - Спроектировал и внедрил новый микросервис для локализации событий от сервера</br>
+                    - Реализация и поддержка gRPC API для взаимодействия микросервисов</br>
+                    - Покрытие кода unit-тестами</br>
+                    - Участие в код ревью и онбординге стажеров</p>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Образование</h2>
+            <p>Бакалавр, Информационная безопасность, КБГУ (2021–2025)</p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Навыки</h2>
+            <p>Kotlin, Java, SQL, PostgreSQL, SQLite3, Linux, Docker, Git, CI/CD, gRPC, REST, Spring, Hibernate, JUnit, Mockito, Testcontainers</p>
+        </section>
+        <section class="text-center no-print">
+            <a href="assets/resume-ru.pdf" target="_blank"
+                class="inline-block text-lg hover:text-teal-400 transition-colors duration-200">
+                Скачать PDF-версию резюме
+            </a>
+        </section>
+    </main>
+    <script>
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        function updateTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateIcon(theme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />';
+            } else {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        updateTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            updateTheme(newTheme);
+        });
+    </script>
+</body>
+</html>
