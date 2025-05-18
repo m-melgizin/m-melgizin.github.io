@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Marat Melgizin</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        [data-theme="light"] {
+            color-scheme: light;
+        }
+        [data-theme="dark"] {
+            color-scheme: dark;
+        }
+        .theme-dependent {
+            transition-property: background-color, color, border-color;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in-out;
+        }
+        [data-theme="dark"] .theme-dependent,
+        [data-theme="dark"] .theme-dependent a {
+            @apply bg-gray-900 text-gray-100;
+        }
+        [data-theme="light"] .theme-dependent,
+        [data-theme="light"] .theme-dependent a {
+            @apply bg-gray-100 text-gray-900;
+        }
+        @media print {
+            .theme-dependent,
+            .theme-dependent *,
+            .theme-dependent a {
+                @apply bg-white text-black !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="theme-dependent min-h-screen">
+    <header class="py-6">
+        <div class="max-w-3xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">CV - Marat Melgizin</h1>
+            <button id="theme-toggle" class="no-print focus:outline-none">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Personal Information</h2>
+            <p>Email: <a href="mailto:m.melgizin@yandex.ru" target="_blank">m.melgizin@yandex.ru</a></p>
+            <p>GitHub: <a href="https://github.com/m-melgizin" target="_blank">https://github.com/m-melgizin</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/m-melgizin/"
+                    target="_blank">https://www.linkedin.com/in/m-melgizin/</a></p>
+            <p>Telegram: <a href="https://t.me/v_oxel" target="_blank">@v_oxel</a></p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Professional Profile</h2>
+            <p class="ml-4">
+                I specialize in backend development with Kotlin and Java, focusing on building microservice architectures,
+                monitoring systems, and data analysis utilities. I have hands-on experience in developing research and
+                cryptographic solutions, as well as applying ML algorithms. I take an engineering approach, emphasizing clean
+                code, reliable testing, and reproducible pipelines.
+            </p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Work Experience</h2>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, <a href="https://tbank.ru/">T-Bank</a></strong> (mar. 2025 – p.t.)</p>
+                <p class="ml-4">Project – Microservice for Monitoring Performance Degradation of Modules and Methods</br>
+                    Tech stack – Kotlin, Java 17, Spring Boot, JUnit 5, Mockito, Testcontainers, GitLab CI/CD, Docker</br>
+                    - Developed a microservice using Kotlin, Spring Boot, and PostgreSQL</br>
+                    - Set up GitLab CI/CD pipelines</br>
+                    - Enforced code quality standards and best practices</br>
+                    - Covered business logic with unit and integration tests (JUnit, Mockito, Testcontainers)</br>
+                    - Participated in task planning and performed code reviews</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, Consulting-Audit-Expert</strong> (sep. 2024 – mar. 2025)</p>
+                <p class="ml-4">Project - Internal Report Generation Service</br>
+                    Tech stack - Kotlin, Java 17, Spring Boot, PostgreSQL, JUnit 5, Mockito, Testcontainers, Docker</br>
+                    - Developed REST API for the report generation service using Kotlin, Spring Boot, and PostgreSQL</br>
+                    - Wrote automated tests to improve code coverage and stability</br>
+                    - Configured development and testing environments using Docker</br>
+                    - Participated in task planning, conducted code reviews, and mentored team members</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>Java Backend Developer, <a href="https://www.axxonsoft.com/ru/">AxxonSoft</a></strong> (oct. 2021
+                    – sep. 2024)</p>
+                <p class="ml-4">Project – Backend for VMS</br>
+                    Tech stack – Java 8, PostgreSQL, JUnit5, Mockito, gRPC, Docker</br>
+                    - Developed server-side business logic for VMS using Java and PostgreSQL</br>
+                    - Tuned PostgreSQL indexes and optimized database queries</br>
+                    - Designed and implemented a new microservice for server-side event localization</br>
+                    - Developed and maintained gRPC APIs for microservice communication</br>
+                    - Wrote unit tests to ensure code reliability</br>
+                    - Participated in code reviews and onboarding of interns</p>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Education</h2>
+            <div class="mb-8">
+                <p><strong>Bachelor’s in Information Security, KBSU</strong> (2021–2025)</p>
+                <p class="ml-4">Specialization – Organization and Technology of Information Security</br>
+                    Thesis – Applying Machine Learning Algorithms to Detect Potentially Malicious Executable Files</p>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Publications</h2>
+            <div class="mb-8">
+                <p><strong>Applying Machine Learning to Identify Phishing Websites Using a Decision Tree
+                        Classifier</strong>.</br>
+                    Akbasheva&nbsp;E.A., Akbasheva&nbsp;G.A., Melgizin&nbsp;M.E.</br>
+                    (<a href="https://www.elibrary.ru/item.asp?id=54967541" target="_blank">eLIBRARY</a>)</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>Machine Learning Methods for Detecting XSS Injections</strong>.</br>
+                    Ksenofontov&nbsp;A.S, Melgizin&nbsp;M.E., Shagirov&nbsp;A.S.</br>
+                    1st place at the "All-Russian Scientific and Practical Conference on Information Security"</p>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Personal Projects</h2>
+            <div class="mb-8">
+                <p><strong>TheBreeder</strong> (<a href="https://github.com/m-melgizin/breeder" target="_blank">Github</a>)
+                </p>
+                <p class="ml-4">A fast and practical tool for combining multiple .py files into a single script, simplifying
+                    distribution/deployment/encoding/encryption of Python scripts along with their dependencies<br>
+                    - Developed an algorithm to build a dependency graph of Python modules, analyze and resolve it<br>
+                    - Implemented an encoding algorithm for the final file to evade antivirus detection</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>CRINGE</strong> (<a href="https://github.com/m-melgizin/cringe" target="_blank">Github</a>)</p>
+                <p class="ml-4">CRINGE (Cryptographically Robust and Innovative Number Generator (Efficient)) – a
+                    cryptographically secure random number generator library based on the GOST R 34.12-2015 (Kuznyechik)
+                    block cipher<br>
+                    - Adapted CTR_DRBG RNG algorithm to work with GOST R 34.12-2015<br>
+                    - Implemented the algorithm as a library and utility for generating cryptographically secure random
+                    sequences</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>DominantTones</strong> (<a href="https://github.com/m-melgizin/DominantTones"
+                        target="_blank">Github</a>, <a href="https://www.kaggle.com/code/mmelgizin/image-clustering-kmeans"
+                        target="_blank">Kaggle</a>)</p>
+                <p class="ml-4">C++ library with Python bindings for image clustering and extraction of dominant tones<br>
+                    - Implemented image file reading<br>
+                    - Implemented KMeans clustering algorithm<br>
+                    - Developed Python bindings for C++ classes and methods</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>AI Code Detector</strong> (<a
+                        href="https://github.com/Dream-Team-Studcamp/ai_generated_code_detection"
+                        target="_blank">Github</a>, <a href="https://ai-generated-code-detection.streamlit.app/"
+                        target="_blank">Streamlit</a>)</p>
+                <p class="ml-4">The main goal was to create a binary classifier that takes code as input and answers "Was
+                    this code generated by an LLM?"<br>
+                    - Researched existing solutions to this problem<br>
+                    - Developed a dataset collection script<br>
+                    - Participated in Streamlit app development</p>
+            </div>
+            <div class="mb-8">
+                <p><strong>UDC Classifier</strong> (<a href="https://github.com/Dream-Team-Studcamp/udc"
+                        target="_blank">Github</a>)</p>
+                <p class="ml-4">The main goal of the project was to develop a classifier that determines the UDC code of an
+                    article based on its abstract<br>
+                    - Researched existing solutions<br>
+                    - Helped develop a scraper for scientific articles<br>
+                    - Conducted experiments with various classifiers</p>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Skills</h2>
+            <p>
+                <strong>Programming languages:</strong> Kotlin, Java, SQL, Python, C++</br>
+                <strong>Databases:</strong> PostgreSQL, SQLite3</br>
+                <strong>Libraries and frameworks:</strong> Spring, Hibernate, JUnit, Mockito, Testcontainers, gRPC</br>
+                <strong>Development tools:</strong> Linux, Docker, Git, CI/CD, REST</br>
+                <strong>Soft-skills:</strong> mentorship, teamwork, communication, code review, autonomy, documentation,
+                knowledge sharing and training
+            </p>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">About me</h2>
+            <p>
+                - Teaching Assistant at HSE University in courses: Python for Data Analysis, Applied Python, SQL,
+                Mathematics for Data Analysis</br>
+                - Mentor in VK Education programs</p>
+        </section>
+        <section class="text-center no-print">
+            <a href="assets/cv-en.pdf" target="_blank"
+                class="inline-block text-lg hover:text-teal-400 transition-colors duration-200">
+                Download PDF version of CV
+            </a>
+        </section>
+    </main>
+    <script>
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        function updateTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateIcon(theme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />';
+            } else {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+            }
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        updateTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            updateTheme(newTheme);
+        });
+    </script>
+</body>
+</html>
